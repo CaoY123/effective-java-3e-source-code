@@ -27,6 +27,16 @@ public class NyPizza extends Pizza {
     }
 
     @Override public String toString() {
-        return "New York Pizza with " + toppings;
+        return size + " New York Pizza with " + toppings;
+    }
+
+    public static void main(String[] args) {
+        Pizza pizza = new NyPizza.Builder(Size.LARGE)
+                .self()
+                .addTopping(Topping.ONION)
+                .addTopping(Topping.SAUSAGE)
+                .addTopping(Topping.PEPPER)
+                .build();
+        System.out.println("做出的披萨为：" + pizza);
     }
 }

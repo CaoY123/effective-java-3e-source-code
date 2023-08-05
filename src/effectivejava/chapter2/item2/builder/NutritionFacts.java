@@ -1,6 +1,12 @@
 package effectivejava.chapter2.item2.builder;
 
 // Builder Pattern  (Page 13)
+
+/**
+ * Builder（建造者）模式就像盖房子，把必要的部分加进去后
+ * 再把可选的部分按需添加，如同垒砖块，最后再进行封顶，得到
+ * 我们想要的类对象。
+ */
 public class NutritionFacts {
     private final int servingSize;
     private final int servings;

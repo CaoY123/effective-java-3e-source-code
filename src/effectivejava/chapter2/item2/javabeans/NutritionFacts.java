@@ -1,6 +1,12 @@
 package effectivejava.chapter2.item2.javabeans;
 
 // JavaBeans Pattern - allows inconsistency, mandates mutability  (pages 11-12)
+
+/**
+ * JavaBeans 模式
+ * 这种模式克服了 重叠构造器模式 的弊端，但是无法保证对类中每一个必需的 域 能设置上值，这完全需要手动操作。
+ * 而且因为对 域 赋值和构造不是一起发生的，无法保证构造出来对象状态的一致性。
+ */
 public class NutritionFacts {
     // Parameters initialized to default values (if any)
     private int servingSize  = -1; // Required; no default value

@@ -1,6 +1,13 @@
 package effectivejava.chapter2.item2.telescopingconstructor;
 
 // Telescoping constructor pattern - does not scale well! (Pages 10-11)
+
+/**
+ * 重叠构造器模式
+ * 这种模式会随着类中可选的 域 的数量的增加而急剧增加，
+ * 而且常常因为在构造对象时要设置一些域的值而不得不设置其他可选域的值，
+ * 而且也造成了用户在构造时选择构造器的困难以及传递参数时会容易造成错误。
+ */
 public class NutritionFacts {
     private final int servingSize;  // (mL)            required
     private final int servings;     // (per container) required
