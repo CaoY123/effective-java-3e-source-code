@@ -5,6 +5,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * 使用 try-with-resources 时，针对关闭资源过程中可能出现的异常，可以直接使用一套 catch 块
+ * 捕获处理即可，无需再像在 try-finally 的 finally 块中需要再捕获异常。
+ */
 public class TopLineWithDefault {
     // try-with-resources with a catch clause  (Page 36)
     static String firstLineOfFile(String path, String defaultVal) {

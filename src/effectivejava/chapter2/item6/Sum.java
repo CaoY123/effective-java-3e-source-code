@@ -3,6 +3,10 @@ package effectivejava.chapter2.item6;
 import java.util.Comparator;
 
 // Hideously slow program! Can you spot the object creation? (Page 24)
+
+/**
+ * 基本类型参与运算比装箱后参与运算快多了，所以要优先使用基本类型，避免不必要的装箱。
+ */
 public class Sum {
     private static long sum() {
         Long sum = 0L;
@@ -12,7 +16,7 @@ public class Sum {
     }
 
     public static void main(String[] args) {
-        int numSets = Integer.parseInt(args[0]);
+        int numSets = 6;
         long x = 0;
 
         for (int i = 0; i < numSets; i++) {
