@@ -32,6 +32,7 @@ public final class CaseInsensitiveString
 
     public static void main(String[] args) {
         Set<CaseInsensitiveString> s = new TreeSet<>();
+//        args = new String[]{"My", "name", "is", "Jack"};
         for (String arg : args)
             s.add(new CaseInsensitiveString(arg));
         System.out.println(s);

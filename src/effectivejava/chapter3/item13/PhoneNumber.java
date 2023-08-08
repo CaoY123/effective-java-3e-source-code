@@ -67,5 +67,8 @@ public final class PhoneNumber implements Cloneable {
         Map<PhoneNumber, String> m = new HashMap<>();
         m.put(pn, "Jenny");
         System.out.println(m.get(pn.clone()));
+
+        PhoneNumber pn2 = pn.clone();
+        System.out.println("是否为同一个对象：" + (pn == pn2 ? "是" : "否"));
     }
 }

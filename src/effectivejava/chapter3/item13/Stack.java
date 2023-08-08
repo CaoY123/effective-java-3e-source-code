@@ -48,6 +48,7 @@ public class Stack implements Cloneable {
     // To see that clone works, call with several command line arguments
     public static void main(String[] args) {
         Stack stack = new Stack();
+        args = new String[]{"My", "name", "is", "Bob"};
         for (String arg : args)
             stack.push(arg);
         Stack copy = stack.clone();
@@ -56,5 +57,8 @@ public class Stack implements Cloneable {
         System.out.println();
         while (!copy.isEmpty())
             System.out.print(copy.pop() + " ");
+
+        System.out.println();
+        System.out.println("是否为同一个对象：" + (copy == stack ? "是" : "否"));
     }
 }

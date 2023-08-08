@@ -43,13 +43,14 @@ public final class PhoneNumber {
 //        return Objects.hash(lineNum, prefix, areaCode);
 //    }
 
-//    // hashCode method with lazily initialized cached hash code  (page 53)
+//     hashCode method with lazily initialized cached hash code  (page 53)
 //    private int hashCode; // Automatically initialized to 0
 //
 //    @Override public int hashCode() {
 //        int result = hashCode;
 //        if (result == 0) {
 //            result = Short.hashCode(areaCode);
+//            // 一般使用素数计算散列码，31 有个很好的特性，即：31 * i == (i << 5) - i，现代的虚拟机可以自动完成这种优化
 //            result = 31 * result + Short.hashCode(prefix);
 //            result = 31 * result + Short.hashCode(lineNum);
 //            hashCode = result;

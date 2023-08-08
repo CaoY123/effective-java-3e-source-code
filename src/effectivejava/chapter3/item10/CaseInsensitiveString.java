@@ -12,12 +12,12 @@ public final class CaseInsensitiveString {
         this.s = Objects.requireNonNull(s);
     }
 
-    // Broken - violates symmetry!
+    // Broken - violates symmetry! 违反了对称性
     @Override public boolean equals(Object o) {
         if (o instanceof CaseInsensitiveString)
             return s.equalsIgnoreCase(
                     ((CaseInsensitiveString) o).s);
-        if (o instanceof String)  // One-way interoperability!
+        if (o instanceof String)  // One-way interoperability! 需要去掉这句，保证 equals 的对称性
             return s.equalsIgnoreCase((String) o);
         return false;
     }
