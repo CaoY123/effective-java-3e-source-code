@@ -1,6 +1,7 @@
 package effectivejava.chapter4.item22.constantinterface;
 
 // Constant interface antipattern - do not use!
+// 常量接口模式是对接口的不良使用
 public interface PhysicalConstants {
     // Avogadro's number (1/mol)
     static final double AVOGADROS_NUMBER   = 6.022_140_857e23;
