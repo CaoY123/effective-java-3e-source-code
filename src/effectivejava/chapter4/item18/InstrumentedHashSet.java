@@ -30,6 +30,7 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
     public static void main(String[] args) {
         InstrumentedHashSet<String> s = new InstrumentedHashSet<>();
         s.addAll(List.of("Snap", "Crackle", "Pop"));
+        // 会返回 6，因为 HashSet 中的 addAll 方法是基于其 add方法实现的
         System.out.println(s.getAddCount());
     }
 }

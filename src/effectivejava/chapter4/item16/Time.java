@@ -1,6 +1,7 @@
 package effectivejava.chapter4.item16;
 
 // Public class with exposed immutable fields - questionable   (Page 79)
+// 让公有类暴露不可变的域（final）危害小一点，可以在构造函数中对其进行限制，但是这也不值得提倡
 public final class Time {
     private static final int HOURS_PER_DAY    = 24;
     private static final int MINUTES_PER_HOUR = 60;
