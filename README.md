@@ -90,3 +90,18 @@
 40. 坚持使用 Override 注解
 41. 用标记接口定义类型  
  1）标记接口是不包含方法声明的接口，它只是指明一个类实现了具有某种属性的接口
+
+### Lambda 和 Stream
+42. Lambda 优先于匿名类
+43. 方法引用优先于 Lambda
+44. 坚持使用标准的函数接口（如：Predicate、Supplier、Consumer、Function、BinaryOperator、UnaryOperator 等）  
+ 1）对自己编写的函数式接口要使用 @FunctionalInterface 注解修饰（这个注解类似于 @Override）  
+45. 谨慎使用 Stream  
+ 1）Stream pipeline 通常是 lazy 的，直到调用终止操作时才开始计算
+46. 优先选择 Stream 中无副作用的函数  
+ 1）forEach 操作是 Stream 终止操作中最没有威力的，也是对 Stream 最不友好的，它是显示迭代的，因而不适合并行。forEach 操作应该只用于报告 Stream 计算的结果，而不是执行计算  
+47. Stream 要优先用 Collection 作为返回类型
+48. 谨慎使用 Stream 并行  
+ 1）在 Stream 上通过并行获得的性能，最好是通过 ArrayList、HashMap、HashSet 和 ConcurrentHashMap 实例，数组，int 范围和 long 范围等。这些数据结构的共性是，都可以被精确、轻松地分成任意大小的子范围，使并行线程中的分工变得更加轻松；  
+ 2）并行 Stream 是一项严格的性能优化，对于任何优化都必须在改变前后对性能进行测试，以确保值得这么做；  
+ 3）如果对 Stream 进行不恰当的并行操作，可能导致程序运行失败，或者造成性能灾难

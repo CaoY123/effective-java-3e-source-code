@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.groupingBy;
 
 // Tasteful use of streams enhances clarity and conciseness (Page 205)
+// 综合 IterativeAnagrams 和 StreamAnagrams 的写法，使整个代码变得优雅和易于理解
 public class HybridAnagrams {
     public static void main(String[] args) throws IOException {
         Path dictionary = Paths.get(args[0]);
